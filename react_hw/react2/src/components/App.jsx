@@ -1,6 +1,7 @@
 import Greeting from "./Greeting";
 import ShoppingList from "./ShoppingList";
 import OrderStatus from "./OrderStatus";
+
 function App() {
   const myName = "Serjio"
   const shoppingList= []
@@ -12,6 +13,7 @@ function App() {
     { orderId: 5, status: 'в пути' },
     { orderId: 6, status: 'доставлен' },
   ]
+  
   return (
     <>
     <Greeting name={myName} />

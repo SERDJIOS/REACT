@@ -1,0 +1,29 @@
+.section {
+
+}
+
+.heading {
+  font-family: 'Raleway-Bold', Helvetica, sans-serif;
+  font-size: var(--heading);
+}
+
+.form {
+  display: flex;
+  width: 60%;
+  height: 105px;
+}
+
+.button {
+  width: 215px;
+  background-color: #274059;
+  color: #fff;
+}
+
+.input {
+  padding: 35px 30px;
+}
+
+.companies {
+  background-color: #fff;
+  
+}

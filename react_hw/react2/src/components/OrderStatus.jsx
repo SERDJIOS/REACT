@@ -3,7 +3,7 @@ function OrderStatus(props) {
       <div>
         {props.orders.map(item => (
           <p>
-            Заказ #{item.orderId}: {item.status}.
+            Заказ {item.orderId} {item.status}.
           </p>
         ))}
       </div>

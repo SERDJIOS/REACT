@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url('../assets/fonts/Raleway-SemiBold.ttf') format('ttf');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url('../assets/fonts/Raleway-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay-Bold';
+  src: url('../assets/fonts/RedHatDisplay-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-display: block;
+}
+
+/* font-display: swap / показывает системный шрифт, пока не загружен сторонний шрифт
+/ для основного текста
+font-display: block / ждем загрузку стороннего шрифта 3 секунды, показывая пустое место
+/ для логотипов, иконочных шрифтов
+font-display: optional / ждем 100 мс, потом показывам системный, браузер сам решит, делать ли замену шрифта
+/ для экономии трафика
+font-display: fallback / ждем 100 мс,потом показывам системный, если не успел, останется системный
+/ когда системный шрифт ок или для декоративных шрифтов */

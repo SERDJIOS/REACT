@@ -1,13 +1,14 @@
 function ShoppingList({items}) {
-    if (items.length !== 0) {
-    return (
-        <ul>
-            {items.map((item) => <li>{item}</li>)}
-        </ul>
-    )
+    if (items.length === 0) {
+    return 
+    <p>Shopping list is empty</p>
+       
+    
 } else {
     return (
-        <p>Shopping list is empty</p>
+        <ul>
+        {items.map((item) => <li>{item}</li>)}
+    </ul>
     )
 }
 }
