@@ -1,0 +1,145 @@
+/* Основные стили для страницы */
+body {
+    background-color: #f4f4f2; /* Светло-бежевый фон */
+    color: #3e2723; /* Темно-коричневый текст */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Каркас приложения */
+.App1 {
+    width: 900px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 40px;
+    border: 4px solid #0ddd10; /* Пастельный оранжевый */
+    border-radius: 16px;
+    background-color: #91e496; /* Светло-оранжевый фон */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Карточка города */
+.city-card {
+    margin: 30px auto 0;
+    padding: 30px;
+    width: 80%;
+    background-color: #ffffff; /* Белый фон для карточки */
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.city-card img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.city-card p {
+    font-size: 16px;
+    color: #5d4037; /* Средне-коричневый */
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.city-card ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    text-align: left;
+    font-size: 14px;
+    color: #5d4037;
+}
+
+.city-card li {
+    margin: 8px 0;
+}
+
+/* Выпадающий список */
+select {
+    width: 180px;
+    height: 50px;
+    padding: 5px;
+    color: #ffffff; /* Белый текст */
+    border: 2px solid #0dde26; /* Светло-голубой */
+    border-radius: 12px;
+    background-color: #14e622; /* Темно-голубой */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:hover, select:focus {
+    border-color: #0288d1; /* Темнее при фокусе */
+}
+
+/* Блок математической викторины */
+.MathQuiz {
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    margin: 30px auto 0;
+    color: #37474f; /* Темно-серый с голубым оттенком */
+    font-size: 20px;
+    border-radius: 16px;
+    background-color: #00f2ff; /* Светло-голубой */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+input {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 2px solid #0b0b0b; /* Светло-голубой */
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #04d342; /* Темнее при фокусе */
+}
+
+button {
+    height: 42px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e00c9; /* Светло-красный */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #50ff43; /* Ярче при наведении */
+}
+
+/* Текстовые стили */
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+    color: #3e2723; /* Темно-коричневый */
+}
+
+p, li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
