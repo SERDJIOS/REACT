@@ -1,0 +1,49 @@
+/* UserProfile.module.css */
+.container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-color: #dfffd8; 
+  border-radius: 16px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 1280px;
+  height: 1280px;
+  margin: 0 auto; 
+  font-family: 'Arial', sans-serif;
+  gap: 20px; 
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+  border: 2px solid #a1d884; 
+}
+
+.name {
+  font-size: 2rem; 
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.info {
+  font-size: 1.2rem; 
+  color: #555555;
+}
+
+.button {
+  background-color: #10d25d; 
+  color: #3a3a3a; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  background-color: #e6e6e6; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
