@@ -1,8 +1,21 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Задача: Игра "Найди пару" (Memory Card Game)
+Цель: Создать игру на запоминание карточек, где игрок должен находить пары. Игра должна включать:
+Отслеживание ходов
+Управление состоянием карточек
+Анимации
+Использование Context API
+Требования:
+Сетка карточек: 4x4 (8 пар), каждая карточка с уникальным эмодзи/символом
+Взаимодействие:
+Клик переворачивает карточку
+Одновременно можно перевернуть только 2 карточки
+При совпадении карточки остаются открытыми
+При несовпадении — переворачиваются обратно через 1 секунду
+Статистика:
+Счетчик ходов (каждая попытка сравнения — 1 ход)
+Отображение оставшихся пар
+Кнопка сброса: Перезапуск игры с новой перемешанной колодой
+Победа: Поздравительное сообщение при нахождении всех пар
+Стилизация: CSS Modules с анимацией переворота
+Context API: Для управления состоянием игры
+Доп. задача: Реализовать логику перемешивания и сравнения карточек с использованием методов массивов (sort, map, filter).
