@@ -7,11 +7,11 @@ export function LanguageProvider({ children }) {
 
   const translations = {
     ru: {
-      title: 'Список',
+      title: 'Выбрать язык английский',
       switchLanguage: 'Switch to English',
     },
     en: {
-      title: 'List',
+      title: 'Russian language was chosen',
       switchLanguage: 'Переключить на русский',
     },
   }
