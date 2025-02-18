@@ -5,100 +5,67 @@ export const GameContext = createContext(null)
 const emojis = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼']
 
 export function GameProvider({ children }) {
-  const [cards, setCards] = useState(generateCards())
+  const [cards, setCards] = useState(generateCards)
   const [turns, setTurns] = useState(0)
   const [matchesLeft, setMatchesLeft] = useState(emojis.length)
   const [flippedCards, setFlippedCards] = useState([])
   const [win, setWin] = useState(false)
-
-  // [1, 2, 3, 4, 5, 6, 7, 8] => cards
-  // [3, 6] => flippedCards
-  // 1 === 3 || 1 === 6 -> false
-  // 2 === 3 || 2 === 6 -> false
-  // 3 === 3 || 3 === 6 -> true -> 3 стал isMatched
-  // 6 === 3 || 6 === 6 -> true -> 6 стал isMatched
+  const [showFireworks, setShowFireworks] = useState(false)
 
   useEffect(() => {
     if (flippedCards.length === 2) {
-      setTurns(prevTurns => prevTurns + 1) // dont use increment
-      const isMatch = flippedCards[0].emoji === flippedCards[1].emoji
+      setTurns(prev => prev + 1)
 
-    
+      const [first, second] = flippedCards
+      const isMatch = first.emoji === second.emoji
 
       if (isMatch) {
-        const newMatches = matchesLeft - 2
-        setMatchesLeft(newMatches)
-        setCards(
-          cards.map(card =>
-            card.id === flippedCards[0].id || card.id === flippedCards[1].id
-              ? { ...card, isMatched: true }
-              : card
-          )
+        setMatchesLeft(prev => prev - 1)
+        setShowFireworks(true) // Показываем анимацию салюта 🎆
+        setTimeout(() => setShowFireworks(false), 1000) // Через 1 сек скрываем
+
+        setCards(prevCards =>
+          prevCards.filter(card => card.id !== first.id && card.id !== second.id) // Удаляем найденные карты
         )
 
-        if (newMatches === 0) {
-          setWin(true)
-        }
-
-
-        setFlippedCards([])
+        if (matchesLeft === 1) setWin(true)
       } else {
-        console.log('NO MATCH');
-        
         setTimeout(() => {
-          setCards(
-            cards.map(card =>
-              card.id === flippedCards[0].id || card.id === flippedCards[1].id
+          setCards(prevCards =>
+            prevCards.map(card =>
+              card.id === first.id || card.id === second.id
                 ? { ...card, isFlipped: false }
                 : card
             )
           )
         }, 1000)
-        setFlippedCards([])
       }
+      setFlippedCards([])
     }
-  }, [cards, flippedCards]) // massiv must have
-
-
+  }, [flippedCards])
 
   function generateCards() {
     const duplicated = [...emojis, ...emojis]
-    //    ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼']
-    //    const obj1={
-    //     id: Date.now(),
-    //     emoji: emojis[0],
-    //     isFlipped: false,
-    //     isMatched: false
-    //    }
-    //   const obj2={
-    //     id: Date.now(),
-    //     emoji: emojis[1],
-    //     isFlipped: false,
-    //     isMatched: false
-    //    }    ====>
     const newCards = duplicated.map(emoji => ({
       id: Math.random(),
-      emoji: emoji,
+      emoji,
       isFlipped: false,
       isMatched: false,
     }))
-
-    const randomizeCards = newCards.toSorted(() => Math.random() - 0.5)
-    // Как работает .toSorted(). Если колбэк возвращает отрицательное число, то a ставится перед b
-    // Если возвращает положительное число, то b ставится перед a
-    return randomizeCards
+    return newCards.toSorted(() => Math.random() - 0.5)
   }
 
   function handleClick(id) {
-    if (flippedCards.includes(id) || flippedCards.length >= 2) {
-      return
-    }
+    if (flippedCards.length === 2) return
+    const clickedCard = cards.find(card => card.id === id)
+    if (flippedCards.includes(clickedCard) || clickedCard.isFlipped) return // Защита от повторного нажатия
 
-    setCards(
-      cards.map(card => (card.id === id ? { ...card, isFlipped: true } : card))
+    setCards(prevCards =>
+      prevCards.map(card =>
+        card.id === id ? { ...card, isFlipped: true } : card
+      )
     )
-
-    setFlippedCards(prevFlip => [...prevFlip, id])
+    setFlippedCards(prev => [...prev, clickedCard])
   }
 
   function reset() {
@@ -107,15 +74,12 @@ export function GameProvider({ children }) {
     setFlippedCards([])
     setMatchesLeft(emojis.length)
     setWin(false)
+    setShowFireworks(false)
   }
 
   return (
-    <GameContext.Provider
-      value={{ cards, turns, matchesLeft, handleClick, reset, win }}
-    >
+    <GameContext.Provider value={{ cards, turns, matchesLeft, handleClick, reset, win, showFireworks }}>
       {children}
     </GameContext.Provider>
   )
 }
-
-// inkapsulirovanie = umnoe slovo dlya "spryatanno"
