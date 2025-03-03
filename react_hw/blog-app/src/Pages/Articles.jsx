@@ -6,7 +6,7 @@ function Articles() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Пример загрузки 5 статей с JSONPlaceholder
+  
     fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
       .then((response) => response.json())
       .then((data) => {
