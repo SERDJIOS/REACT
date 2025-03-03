@@ -10,7 +10,7 @@ export default function Main() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // axios => resposnse: { data: '' }
+        // axios => response: { data: '' }
         const { data } = await axios.get('https://67beee1cb2320ee05011f9de.mockapi.io/api/productData');
         setProducts(data);
       } catch (error) {

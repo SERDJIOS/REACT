@@ -12,6 +12,7 @@ export const Image = styled.img`
   width: 278px;
   height: 127px;
   margin-bottom: 32px;
+  object-fit: contain;
 `
 
 export const Title = styled.h3`
