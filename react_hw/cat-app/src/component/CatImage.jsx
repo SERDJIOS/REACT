@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './CatImage.module.css';
 
-const CatImage = () => {
+export default function CatImage() {
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -36,6 +36,4 @@ const CatImage = () => {
       </button>
     </div>
   );
-};
-
-export default CatImage;
+}

@@ -1,0 +1,13 @@
+.appContainer {
+    background-color: teal;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  

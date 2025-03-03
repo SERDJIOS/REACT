@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Articles() {
+export default function Articles() {
   const [articles, setArticles] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-  
     fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
       .then((response) => response.json())
-      .then((data) => {
-        setArticles(data);
-      })
-      .catch((error) => {
-        console.error('Ошибка при загрузке статей:', error);
-      });
+      .then((data) => setArticles(data))
+      .catch((error) => console.error('Ошибка при загрузке статей:', error));
   }, []);
 
   const handleArticleClick = (id) => {
-    // Переход на детальную страницу статьи
     navigate(`/articles/${id}`);
   };
 
@@ -47,5 +41,3 @@ function Articles() {
     </div>
   );
 }
-
-export default Articles;

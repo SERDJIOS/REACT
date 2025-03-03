@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-function ArticleDetail() {
+export default function ArticleDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [article, setArticle] = useState(null);
@@ -9,12 +9,8 @@ function ArticleDetail() {
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
-      .then((data) => {
-        setArticle(data);
-      })
-      .catch((error) => {
-        console.error('Ошибка при загрузке статьи:', error);
-      });
+      .then((data) => setArticle(data))
+      .catch((error) => console.error('Ошибка при загрузке статьи:', error));
   }, [id]);
 
   if (!article) {
@@ -29,5 +25,3 @@ function ArticleDetail() {
     </div>
   );
 }
-
-export default ArticleDetail;
