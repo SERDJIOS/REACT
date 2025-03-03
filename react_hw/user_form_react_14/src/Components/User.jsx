@@ -1,19 +1,22 @@
-
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Card, CardContent, Typography } from '@mui/material';
 
-const User = ({ name, status }) => (
-  <div>
-    <h2>User Profile</h2>
-    <h3>User Information</h3>
-    <p>Name: {name}</p>
-    <p>Status: {status}</p>
-  </div>
-);
+export default function User() {
+  const name = useSelector((state) => state.name);
+  const status = useSelector((state) => state.status);
 
-const mapStateToProps = (state) => ({
-  name: state.name,
-  status: state.status,
-});
-
-export default connect(mapStateToProps)(User);
+  return (
+    <Card sx={{ maxWidth: 400, mx: 'auto', mt: 4, p: 2, boxShadow: 3 }}>
+      <CardContent>
+        <Typography variant="h4" gutterBottom>
+          User Profile
+        </Typography>
+        <Typography variant="h6">User Information</Typography>
+        <Typography>Name: {name}</Typography>
+        <Typography>Status: {status}</Typography>
+      </CardContent>
+    </Card>
+  );
+}
+    

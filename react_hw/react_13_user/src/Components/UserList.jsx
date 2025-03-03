@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 import UserItem from './UserItem';
 import styles from '../styles/UserList.module.css';
 
-function UserList() {
-  // Достаём список пользователей и строку фильтра из Redux
+export default function UserList() {
+ 
   const { users, filter } = useSelector((state) => ({
     users: state.users,
     filter: state.filter
   }));
 
-  // Фильтруем пользователей по строке filter
+
   const filteredUsers = users.filter((user) =>
     user.toLowerCase().includes(filter.toLowerCase())
   );
@@ -23,5 +23,3 @@ function UserList() {
     </div>
   );
 }
-
-export default UserList;

@@ -1,5 +1,5 @@
 {
-  "name": "user_form_react_14",
+  "name": "my_ui_react_16",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,12 +12,10 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.6",
     "@mui/material": "^6.4.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-redux": "^9.2.0",
-    "redux": "^5.0.1",
-    "styled-components": "^6.1.15"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

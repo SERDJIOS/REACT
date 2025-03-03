@@ -1,9 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
-function ValueDisplay({ value }) {
- 
+export default function ValueDisplay({ value }) {
   const prevValueRef = useRef('');
-
 
   useEffect(() => {
     prevValueRef.current = value;
@@ -16,5 +14,3 @@ function ValueDisplay({ value }) {
     </div>
   );
 }
-
-export default ValueDisplay;

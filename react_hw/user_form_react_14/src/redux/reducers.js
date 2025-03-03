@@ -1,4 +1,3 @@
-
 import { SET_USER_INFO } from './actions';
 
 const initialState = {
@@ -6,7 +5,7 @@ const initialState = {
   status: 'online',
 };
 
-const userReducer = (state = initialState, action) => {
+export default function userReducer(state = initialState, action) {
   switch (action.type) {
     case SET_USER_INFO:
       return {
@@ -17,6 +16,4 @@ const userReducer = (state = initialState, action) => {
     default:
       return state;
   }
-};
-
-export default userReducer;
+}

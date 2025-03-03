@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setFilter } from '../redux/actions';
 import styles from '../styles/Filter.module.css';
 
-function Filter() {
+export default function Filter() {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filter);
 
@@ -23,5 +23,3 @@ function Filter() {
     </div>
   );
 }
-
-export default Filter;
