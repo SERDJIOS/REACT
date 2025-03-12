@@ -1,0 +1,43 @@
+.saleProducts {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.saleProducts h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Сетка */
+.saleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.saleItem {
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.saleItem:hover {
+  transform: translateY(-3px);
+}
+
+/* Скидочный бейдж */
+.discountBadge {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: inline-block;
+}

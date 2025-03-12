@@ -1,0 +1,29 @@
+.notFound {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.notFound h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.notFound p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.notFound a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0077ff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+}

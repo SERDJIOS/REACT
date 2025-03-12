@@ -1,0 +1,95 @@
+.cart {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cart h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.items {
+  margin-bottom: 20px;
+}
+
+.cartItem {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cartItem img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.cartItem div {
+  flex: 1;
+}
+
+.cartItem p {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.cartItem input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.cartItem button {
+  padding: 6px 12px;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.summary {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Форма оформления заказа */
+.checkoutForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.checkoutForm input {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkoutForm button {
+  padding: 12px 24px;
+  background-color: #0077ff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-weight: 500;
+}

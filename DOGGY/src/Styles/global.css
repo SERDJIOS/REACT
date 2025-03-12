@@ -1,0 +1,44 @@
+/* 1) Подключаем шрифт Montserrat c нужными весами */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap");
+
+/* Сброс стилей (или можно подключить reset/normalize) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) Базовые стили для html, body */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #333; /* Общий цвет текста */
+  background-color: #fff; /* Фон сайта (можно менять) */
+}
+
+/* 3) Класс-контейнер для центровки контента шириной 1440px */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto; /* центрируем */
+  padding: 0 20px; /* боковые отступы (если нужно) */
+}
+
+/* Дополнительно можно настроить заголовки, ссылки и т.д. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* По умолчанию делаем заголовки полужирными */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

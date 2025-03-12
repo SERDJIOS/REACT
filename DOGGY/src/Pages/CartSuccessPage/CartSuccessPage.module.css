@@ -1,0 +1,30 @@
+.cartSuccess {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cartSuccess h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cartSuccess p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.cartSuccess a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0077ff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 20px;
+}

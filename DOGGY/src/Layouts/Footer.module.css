@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 40px 0;
+  }
+  
+  .footerContainer {
+    /* Можно использовать общий класс .container из global.css */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  /* Контакты, соцсети, карта */
+  .contact, .social, .map {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .contact p,
+  .social p {
+    margin: 5px 0;
+    font-weight: 500; /* Montserrat 500 */
+    font-size: 1rem;
+  }
+  
